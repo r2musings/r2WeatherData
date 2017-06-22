@@ -1,5 +1,3 @@
-
-
 const request = require('request');
 var express = require('express');
 var app = express();
@@ -22,23 +20,22 @@ app.get('/:zip', function (req, res) {
 })
 
 var port = process.env.PORT || 1337;
-var server = app.listen(port, function () {
+app.listen(port, function () {
     // console.log(process.env);
     //  var host = process.server;
     // console.log("listening on http://%s:%s", host, port)
     console.log("listening on http://localhost:%s", port);
 });
 
-// var http = require('http');
+var http = require('http');
 
-// var server = http.createServer(function(request, response) {
+var server = http.createServer(function(request, response) {
 
-//     response.writeHead(200, {"Content-Type": "text/plain"});
-//     response.end("Hello World!");
+    response.writeHead(200, {"Content-Type": "text/plain"});
+    response.end("Hello World!");
 
-// });
+});
 
-
-// server.listen(port);
+server.listen(port);
 
 console.log("Server running at http://localhost:%d", port);
