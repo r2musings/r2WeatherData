@@ -20,12 +20,12 @@ app.get('/by-zip/:zip', function (req, res) {
 })
 
 var port = process.env.PORT || 1337;
-app.listen(port, function () {
-    // console.log(process.env);
-    //  var host = process.server;
-    // console.log("listening on http://%s:%s", host, port)
-    console.log("listening on http://localhost:%s", port);
-});
+// app.listen(port, function () {
+//     // console.log(process.env);
+//     //  var host = process.server;
+//     // console.log("listening on http://%s:%s", host, port)
+//     console.log("listening on http://localhost:%s", port);
+// });
 
 var http = require('http');
 
