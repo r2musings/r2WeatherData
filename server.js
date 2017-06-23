@@ -20,22 +20,22 @@ app.get('/by-zip/:zip', function (req, res) {
 })
 
 var port = process.env.PORT || 1337;
-// app.listen(port, function () {
-//     // console.log(process.env);
-//     //  var host = process.server;
-//     // console.log("listening on http://%s:%s", host, port)
-//     console.log("listening on http://localhost:%s", port);
-// });
-
-var http = require('http');
-
-var server = http.createServer(function(request, response) {
-
-    response.writeHead(200, {"Content-Type": "text/plain"});
-    response.end("Hello World!");
-
+app.listen(port, function () {
+     // console.log(process.env);
+     //  var host = process.server;
+     // console.log("listening on http://%s:%s", host, port)
+     console.log("listening on http://localhost:%s", port);
 });
 
-server.listen(port);
+// var http = require('http');
 
-console.log("Server running at http://localhost:%d", port);
+// var server = http.createServer(function(request, response) {
+
+    // response.writeHead(200, {"Content-Type": "text/plain"});
+    // response.end("Hello World!");
+
+// });
+
+// server.listen(port);
+
+//console.log("Server running at http://localhost:%d", port);
