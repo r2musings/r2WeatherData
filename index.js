@@ -5,7 +5,7 @@ let apiKey = '19bb9ff9d351e160bcb94bd5094f775f';
 let zip = '30082';
 let url = `http://api.openweathermap.org/data/2.5/weather?zip=${zip},us&appid=${apiKey}&units=imperial`
 
-app.get('/:zip', function (req, res) {
+app.get('/by-zip/:zip', function (req, res) {
     zip = zip || req.params.zip;
     request(url, function (err, response, body) {
         if(err){
