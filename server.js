@@ -1,8 +1,8 @@
 const request = require('request');
 var express = require('express');
 var app = express();
-//let apiKey = '19bb9ff9d351e160bcb94bd5094f775f';
 let apiKey = process.env.APPSETTING_ApiKey || '0000000000';
+var port = process.env.PORT || 1337;
 
 app.get('/by-zip/:zip', function (req, res) {
     let zip = req.params.zip;
@@ -15,8 +15,7 @@ app.get('/by-zip/:zip', function (req, res) {
             res.end(body);
         }
     });
-})
+});
 
-var port = process.env.PORT || 1337;
 app.listen(port, function () {
 }); 
