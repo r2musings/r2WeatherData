@@ -10,7 +10,7 @@ app.get('/by-zip/:zip', function (req, res) {
 
     request(url, function (err, response, body) {
         if(err){
-            console.log('error:', error);
+            res.error(error);
         } else {
             res.end(body);
         }
