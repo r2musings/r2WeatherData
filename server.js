@@ -4,7 +4,7 @@ var app = express();
 let apiKey = process.env.APPSETTING_ApiKey || '0000000000';
 var port = process.env.PORT || 1337;
 
-app.get('/by-zip/:zip', function (req, resXX) {
+app.get('/by-zip/:zip', function (req, res) {
     let zip = req.params.zip;
     let url = `http://api.openweathermap.org/data/2.5/weather?zip=${zip},us&appid=${apiKey}&units=imperial`
 
