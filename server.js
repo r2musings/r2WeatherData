@@ -3,7 +3,6 @@ var express = require('express');
 var app = express();
 let apiKey = process.env.APPSETTING_ApiKey || '0000000000';
 var port = process.env.PORT || 1337;
-let t = 'deleteme';
 
 app.get('/by-zip/:zip', function (req, res) {
     let zip = req.params.zip;
